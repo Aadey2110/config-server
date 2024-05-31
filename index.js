@@ -14,8 +14,7 @@ server.use(bodyParser.urlencoded({ extended: false }));
 server.use(bodyParser.json());
 
 server.get("/", (req, res) => {
-  console.log(req.method);
-  console.log(req.body);
+  console.log(req);
   console.log(req.url);
   res.end(fs.readFileSync(path.resolve("./index.html"), { encoding: "utf-8" }));
 });
