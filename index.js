@@ -21,6 +21,7 @@ server.get("/", (req, res) => {
 });
 
 server.post("/", (req, res) => {
+  console.log(req.method);
   console.log(req.body);
   console.log(req.url);
   res.end(fs.readFileSync(path.resolve("./index.html"), { encoding: "utf-8" }));
